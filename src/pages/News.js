@@ -11,7 +11,7 @@ import {
   Button,
   Dimensions,
 } from 'react-native';
-import data from '../mock/data.json';
+import data from '../mock/newsData.json';
 import TextTicker from 'react-native-text-ticker';
 
 const News = (props) => {
