@@ -9,8 +9,11 @@ import {
   StyleSheet,
   View,
   Dimensions,
+  Linking,
+  Alert,
 } from 'react-native';
 import data from '../mock/contact.json';
+
 const Contact = (props) => {
   const [dataList, setDataList] = useState([]);
 
@@ -39,12 +42,18 @@ const Contact = (props) => {
             <Text style={styles.mockDataText}>{item.faks}</Text>
           </View>
         </View>
-        <View style={styles.iconsContainer}>
+        <TouchableOpacity
+          style={styles.iconsContainer}
+          onPress={() =>
+            Linking.openURL(
+              'https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin',
+            )
+          }>
           <Image style={styles.icon} source={require('../Icons/mail.png')} />
           <View style={styles.mockData}>
-            <Text style={styles.mockDataText}>{item.eposta}</Text>
+            <Text style={styles.mockDataText}>basin@dpu.edu.tr</Text>
           </View>
-        </View>
+        </TouchableOpacity>
         <View style={styles.iconsContainer}>
           <Image style={styles.icon} source={require('../Icons/map.png')} />
           <View style={styles.mockData}>
