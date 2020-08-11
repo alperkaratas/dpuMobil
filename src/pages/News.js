@@ -9,7 +9,6 @@ import {
   StyleSheet,
   TouchableOpacity,
   FlatList,
-  Button,
   Dimensions,
 } from 'react-native';
 import data from '../mock/newsData.json';
@@ -32,7 +31,7 @@ const News = (props) => {
               <Text style={{color: 'grey'}}>{item.date}</Text>
             </View>
           </View>
-          <Text lineBreakMode>{item.description}</Text>
+          <Text style={styles.text}>{item.description}</Text>
         </View>
       </View>
     );
@@ -87,6 +86,9 @@ const styles = StyleSheet.create({
   image: {
     width: 300,
     height: 250,
+  },
+  text: {
+    fontSize: 15,
   },
 });
 

@@ -78,15 +78,6 @@ const Contact = (props) => {
         <FlatList
           data={dataList}
           keyExtractor={(item, index) => index.toString()}
-          ItemSeparatorComponent={() => (
-            <View
-              style={{
-                borderWidth: 1,
-                borderColor: '#e0e0e0',
-                marginVertical: 10,
-              }}
-            />
-          )}
           renderItem={renderContact}
         />
       </View>
@@ -111,7 +102,7 @@ const styles = StyleSheet.create({
   },
   mockData: {
     marginHorizontal: 15,
-    marginTop: 4,
+    marginTop: 15,
   },
   mockDataText: {
     fontSize: 18,
