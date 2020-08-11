@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useState, useEffect} from 'react';
 import {
@@ -12,7 +13,6 @@ import {
   Dimensions,
 } from 'react-native';
 import data from '../mock/newsData.json';
-import TextTicker from 'react-native-text-ticker';
 
 const News = (props) => {
   const [dataList, setDataList] = useState([]);

@@ -17,16 +17,22 @@ const CardView = (props) => {
           imgSource={require('../Icons/haberler.png')}
         />
         <Card
+          pressCard={() => navigation.navigate('Announcements')}
           cardName="DUYURULAR"
           imgSource={require('../Icons/duyurular.png')}
         />
       </View>
       <View style={{flexDirection: 'row', justifyContent: 'center'}}>
         <Card
+          pressCard={() => navigation.navigate('MyoNews')}
           cardName="MYO HABER"
           imgSource={require('../Icons/myohaber.png')}
         />
-        <Card cardName="İLETİŞİM" imgSource={require('../Icons/phone.png')} />
+        <Card
+          pressCard={() => navigation.navigate('Contact')}
+          cardName="İLETİŞİM"
+          imgSource={require('../Icons/phone.png')}
+        />
       </View>
     </ScrollView>
   );

@@ -1,8 +1,7 @@
 import * as React from 'react';
-import {View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Main, News} from './pages';
+import {Main, News, Contact, Announcements, MyoNews} from './pages';
 
 const Stack = createStackNavigator();
 
@@ -18,6 +17,21 @@ function Router() {
         <Stack.Screen
           name="News"
           component={News}
+          options={{gestureEnabled: false}}
+        />
+        <Stack.Screen
+          name="Contact"
+          component={Contact}
+          options={{gestureEnabled: false}}
+        />
+        <Stack.Screen
+          name="Announcements"
+          component={Announcements}
+          options={{gestureEnabled: false}}
+        />
+        <Stack.Screen
+          name="MyoNews"
+          component={MyoNews}
           options={{gestureEnabled: false}}
         />
       </Stack.Navigator>
