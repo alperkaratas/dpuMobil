@@ -77,6 +77,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'space-between',
+    marginVertical: 30,
   },
   title: {
     fontSize: 23,

@@ -12,11 +12,13 @@ const CardView = (props) => {
       </View>
       <View style={{flexDirection: 'row', justifyContent: 'center'}}>
         <Card
+          style={{marginBottom: 20}}
           pressCard={() => navigation.navigate('News')}
           cardName="HABERLER"
           imgSource={require('../Icons/haberler.png')}
         />
         <Card
+          style={{marginBottom: 20}}
           pressCard={() => navigation.navigate('Announcements')}
           cardName="DUYURULAR"
           imgSource={require('../Icons/duyurular.png')}
@@ -24,11 +26,13 @@ const CardView = (props) => {
       </View>
       <View style={{flexDirection: 'row', justifyContent: 'center'}}>
         <Card
+          style={{marginBottom: 20}}
           pressCard={() => navigation.navigate('MyoNews')}
           cardName="MYO HABER"
           imgSource={require('../Icons/myohaber.png')}
         />
         <Card
+          style={{marginBottom: 20}}
           pressCard={() => navigation.navigate('Contact')}
           cardName="İLETİŞİM"
           imgSource={require('../Icons/phone.png')}
@@ -42,6 +46,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#355284',
     height: Dimensions.get('window').height,
+    paddingHorizontal: 10,
   },
   nameContainer: {
     alignSelf: 'center',
